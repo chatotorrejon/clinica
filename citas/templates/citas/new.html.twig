@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Citas{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center; color: darkblue;">Create new Citas</h1>
+
+    {{ include('citas/_form.html.twig') }}
+    <div style="text-align: center;">
+        <a href="{{ path('app_citas_index') }}" style="color: darkblue; font-size: 20px; text-decoration: none">back to list</a>
+    </div>
+{% endblock %}

@@ -1,9 +1,43 @@
-<?php 
-    $conexion = mysqli_connect("localhost","root","","clinica")
-        or die("PROBLEMAS CON LA CONEXION"
-    );
-        mysqli_query($conexion, "INSERT INTO alumnos(nombre,mail,codigo)VALUES('$_REQUEST[codigo]','$_REQUEST[nombre]','$_REQUEST[apellido]',
-                $_REQUEST[habitacion])") or die("PROBLEMAS EN LA SELECT" . mysqli_error($conexion));
-        mysqli_close($conexion);
-        echo "EL PACIENTE FUE INGRESADO";
-?>
+<?php include 'log/header.php'?>
+<div class="container" style="margin-top: 150px; width: 300px">
+    <form action="registrar2.php" method="post">
+        <div class="mb-3">
+            <label for="" class="form-label">CODIGO DEL PACIENTE:</label>
+            <input
+                type="text"
+                class="form-control"
+                name="codigo"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">NOMBRE DEL PACIENTE:</label>
+            <input
+                type="text"
+                class="form-control"
+                name="nombre"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">TIPO DE HABITACIÓN:</label>
+            <input
+                type="text"
+                class="form-control"
+                name="habitacion"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+
+        </div>
+        <button type="submit" value="REGISTRAR" style="margin-left: 100px; background-color: blue; color: white">REGISTRAR</button>
+        
+    </form>
+</div>
